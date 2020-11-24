@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LabCMS.DocumentDomain.Shared.Models
 {
-    public class DocumentContent
+    public class DocumentChain
     {
-        public Guid Id { get; init; }
-        public string Base64Content { get; init; } = null!;
+        public Guid Id { get; init; } = Guid.NewGuid();
+        public List<Guid> Members { get; } = new();
     }
 }
